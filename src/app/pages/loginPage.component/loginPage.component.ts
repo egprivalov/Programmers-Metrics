@@ -14,15 +14,15 @@ import { GitLabService } from '../../services/gitLabService/gitlabService.servic
     styleUrl: './loginPage.component.scss',
 })
 export class LoginPageComponent {
-    token: string = '';
-    signInToken(): void {
+    public token: string = '';
+    public signInToken(): void {
         localStorage.setItem('gitlab_token', this.token);
         console.log('Токен сохранен');
     }
 
     private gitlab = inject(GitLabService);
 
-    testApi() {
+    public testApi() {
         this.gitlab.getUser().subscribe(res => {
             console.log(res);
         });

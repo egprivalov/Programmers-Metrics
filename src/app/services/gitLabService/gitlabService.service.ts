@@ -17,7 +17,7 @@ export class GitLabService {
         }
     }
 
-    getUser() {
+    public getUser() {
         return this.http.get(`${this.gitlabUrl}/user`, this.getHeaders());
     }
 }
