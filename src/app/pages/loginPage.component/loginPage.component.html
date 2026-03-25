@@ -7,6 +7,9 @@
         <input matInput [(ngModel)]="token">
     </mat-form-field>
 
-    <button mat-raised-button class="auth-section__button" (click)="signInToken()">Войти</button>
+    <button mat-raised-button 
+            class="auth-section__button"
+            [disabled]="!token || !token.trim()" 
+            (click)="signInToken()">Войти</button>
     <button (click)="testApi()">Тест апи</button>
 </div>
