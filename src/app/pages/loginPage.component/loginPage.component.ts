@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
@@ -14,6 +14,7 @@ import { take } from 'rxjs';
     providers: [GitLabService],
     templateUrl: './loginPage.component.html',
     styleUrl: './loginPage.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginPageComponent {
     public token: string = '';
