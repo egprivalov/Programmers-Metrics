@@ -16,7 +16,8 @@
     border-style: none;
     background-color: #f5bf42;
     border-radius: 12px;
-    width: 10%;
+    max-width: 300px;
+    min-width: 150px;
     height: 60px;
     font-size: 16px;
     cursor: pointer;
