@@ -4,6 +4,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { GitLabService } from '../../services/gitLabService/gitlabService.service';
+import { take } from 'rxjs';
 @Component({
     selector: 'app-auth',
     imports: [FormsModule, 
@@ -23,7 +24,9 @@ export class LoginPageComponent {
     private gitlab = inject(GitLabService);
 
     public testApi() {
-        this.gitlab.getUser().subscribe(res => {
+        this.gitlab.getUser()
+        .pipe(take(1))
+        .subscribe(res => {
             console.log(res);
         });
     }
