@@ -20,15 +20,10 @@
     height: 60px;
     font-size: 16px;
     cursor: pointer;
+
+    &:disabled {
+        cursor: default;
+    }
 }
 
-.auth-section__input {
-    ::ng-deep .mat-mdc-text-field-wrapper {
-        background-color: #ffffff;
-    }
-
-    ::ng-deep .mat-mdc-input-element {
-        color: #000000;
-    }
-} 
 
