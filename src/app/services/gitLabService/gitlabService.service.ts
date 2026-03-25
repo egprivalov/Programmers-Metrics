@@ -4,7 +4,7 @@ import { inject, Injectable } from '@angular/core';
 @Injectable({
     providedIn: 'root',
 })
-export class Gitlab {
+export class GitLabService {
     private gitlabUrl = 'https://gitlab.com/api/v4';
 
     private http = inject(HttpClient)

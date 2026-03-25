@@ -3,24 +3,24 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { Gitlab } from '../../services/gitlab';
+import { GitLabService } from '../../services/gitLabService/gitlabService.service';
 @Component({
     selector: 'app-auth',
     imports: [FormsModule, 
         MatFormFieldModule, 
         MatInputModule,
         RouterModule],
-    templateUrl: './auth.html',
-    styleUrl: './auth.scss',
+    templateUrl: './loginPage.component.html',
+    styleUrl: './loginPage.component.scss',
 })
-export class Auth {
+export class LoginPageComponent {
     token: string = '';
     signInToken(): void {
         localStorage.setItem('gitlab_token', this.token);
         console.log('Токен сохранен');
     }
 
-    private gitlab = inject(Gitlab);
+    private gitlab = inject(GitLabService);
 
     testApi() {
         this.gitlab.getUser().subscribe(res => {

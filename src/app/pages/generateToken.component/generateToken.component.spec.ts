@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GenerateToken } from './generate-token';
+import { GenerateTokenComponent } from './generateToken.component';
 
 describe('GenerateToken', () => {
-    let component: GenerateToken;
-    let fixture: ComponentFixture<GenerateToken>;
+    let component: GenerateTokenComponent;
+    let fixture: ComponentFixture<GenerateTokenComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [GenerateToken],
+            imports: [GenerateTokenComponent],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(GenerateToken);
+        fixture = TestBed.createComponent(GenerateTokenComponent);
         component = fixture.componentInstance;
         await fixture.whenStable();
     });
