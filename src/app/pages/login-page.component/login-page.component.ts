@@ -3,7 +3,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { GitLabService } from '../../services/gitLabService/gitlabService.service';
+import { GitLabService } from '../../services/gitlab-request/gitlab-request.service';
 import { take } from 'rxjs';
 @Component({
     selector: 'app-auth',
@@ -11,8 +11,8 @@ import { take } from 'rxjs';
         MatFormFieldModule, 
         MatInputModule,
         RouterModule],
-    templateUrl: './loginPage.component.html',
-    styleUrl: './loginPage.component.scss',
+    templateUrl: './login-page.component.html',
+    styleUrl: './login-page.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginPageComponent {

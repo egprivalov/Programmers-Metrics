@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { LoginPageComponent } from './pages/loginPage.component/loginPage.component';
-import { GenerateTokenComponent } from './pages/generateToken.component/generateToken.component';
+import { LoginPageComponent } from './pages/login-page.component/login-page.component';
+import { GenerateTokenComponent } from './pages/generate-token.component/generate-token.component';
 
 export const routes: Routes = [
     {

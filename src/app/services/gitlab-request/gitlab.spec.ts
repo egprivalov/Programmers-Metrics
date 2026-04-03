@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GitLabService } from './gitlabService.service';
+import { GitLabService } from './gitlab-request.service';
 
 describe('Gitlab', () => {
     let service: GitLabService;

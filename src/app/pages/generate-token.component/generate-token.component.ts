@@ -2,9 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-generate-token',
-    imports: [],
-    templateUrl: './generateToken.component.html',
-    styleUrl: './generateToken.component.scss',
+    templateUrl: './generate-token.component.html',
+    styleUrl: './generate-token.component.scss',
 })
 export class GenerateTokenComponent {
     

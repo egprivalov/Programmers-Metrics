@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GenerateTokenComponent } from './generateToken.component';
+import { LoginPageComponent } from './login-page.component';
 
-describe('GenerateToken', () => {
-    let component: GenerateTokenComponent;
-    let fixture: ComponentFixture<GenerateTokenComponent>;
+describe('LoginPageComponent', () => {
+    let component: LoginPageComponent;
+    let fixture: ComponentFixture<LoginPageComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [GenerateTokenComponent],
+            imports: [LoginPageComponent],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(GenerateTokenComponent);
+        fixture = TestBed.createComponent(LoginPageComponent);
         component = fixture.componentInstance;
         await fixture.whenStable();
     });
