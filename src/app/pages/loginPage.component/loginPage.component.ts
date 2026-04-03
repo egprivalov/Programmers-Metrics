@@ -11,7 +11,6 @@ import { take } from 'rxjs';
         MatFormFieldModule, 
         MatInputModule,
         RouterModule],
-    providers: [GitLabService],
     templateUrl: './loginPage.component.html',
     styleUrl: './loginPage.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush
