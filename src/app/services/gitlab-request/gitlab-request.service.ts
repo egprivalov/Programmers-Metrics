@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { inject } from '@angular/core';
-import { GITLAB_API_URL } from '../../core/tokens/gitlab.token';
-
+import { inject, Injectable } from '@angular/core';
+import { GITLAB_API_URL } from '../../core/tokens/gitlab-api-url.token';
+@Injectable()
 export class GitLabService {
     private gitlabUrl = inject(GITLAB_API_URL);
 

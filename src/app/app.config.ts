@@ -1,6 +1,6 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { GITLAB_API_URL } from './core/tokens/gitlab.token';
+import { GITLAB_API_URL } from './core/tokens/gitlab-api-url.token';
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 
