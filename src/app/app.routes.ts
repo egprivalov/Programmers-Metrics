@@ -10,6 +10,6 @@ export const routes: Routes = [
     {
         path: 'generate_token',
         component: GenerateTokenComponent
-    }
+    },
 ];
 

@@ -11,7 +11,7 @@ import { GITLAB_API_URL } from './core/tokens/gitlab-api-url.token';
         { provide: GITLAB_API_URL, useValue: 'https://gitlab.com/api/v4' }
     ],
     templateUrl: './app.html',
-    styleUrl: './app.scss'
+    styleUrl: './app.scss',
 })
 export class App {
 }

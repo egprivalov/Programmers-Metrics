@@ -5,14 +5,14 @@ import { GITLAB_API_URL } from '../../core/tokens/gitlab-api-url.token';
 export class GitLabService {
     private gitlabUrl = inject(GITLAB_API_URL);
 
-    private http = inject(HttpClient)
+    private http = inject(HttpClient);
 
     private getHeaders(): { headers: HttpHeaders} {
         const token = localStorage.getItem('gitlab_token');
 
         return {
-            headers: new HttpHeaders({'Authorization': `Bearer ${token}` || ""})
-        }
+            headers: new HttpHeaders({'Authorization': `Bearer ${token}` || ''}),
+        };
     }
 
     public getUser() {
