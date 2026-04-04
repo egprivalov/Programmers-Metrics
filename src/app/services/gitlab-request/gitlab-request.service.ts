@@ -1,11 +1,9 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-
-@Injectable({
-    providedIn: 'root',
-})
-export class Gitlab {
-    private gitlabUrl = 'https://gitlab.com/api/v4';
+import { GITLAB_API_URL } from '../../core/tokens/gitlab-api-url.token';
+@Injectable()
+export class GitLabService {
+    private gitlabUrl = inject(GITLAB_API_URL);
 
     private http = inject(HttpClient);
 
@@ -17,7 +15,7 @@ export class Gitlab {
         };
     }
 
-    getUser() {
+    public getUser() {
         return this.http.get(`${this.gitlabUrl}/user`, this.getHeaders());
     }
 }

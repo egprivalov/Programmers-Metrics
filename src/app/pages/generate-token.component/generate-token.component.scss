@@ -4,10 +4,10 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-}
 
-.generate_section__title {
-    font-weight: 500;
+    &__title {
+        font-weight: 500;
+    }
 }
 
 .generate_section__list {

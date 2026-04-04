@@ -1,15 +1,15 @@
 import { Routes } from '@angular/router';
-import { Auth } from './pages/auth/auth';
-import { GenerateToken } from './pages/generate-token/generate-token';
+import { LoginPageComponent } from './pages/login-page.component/login-page.component';
+import { GenerateTokenComponent } from './pages/generate-token.component/generate-token.component';
 
 export const routes: Routes = [
     {
         path: '',
-        component: Auth,
+        component: LoginPageComponent
     },
     {
         path: 'generate_token',
-        component: GenerateToken,
+        component: GenerateTokenComponent
     },
 ];
 
