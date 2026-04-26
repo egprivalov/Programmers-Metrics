@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { LoginPageComponent } from './pages/login-page.component/login-page.component';
-import { GenerateTokenComponent } from './pages/generate-token.component/generate-token.component';
+import { CallbackComponent } from './pages/callback.component/callback.component';
 
 export const routes: Routes = [
     {
@@ -8,8 +8,8 @@ export const routes: Routes = [
         component: LoginPageComponent
     },
     {
-        path: 'generate_token',
-        component: GenerateTokenComponent
-    },
+        path: 'auth/callback',
+        component: CallbackComponent
+    }
 ];
 

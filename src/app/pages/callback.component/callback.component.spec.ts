@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GenerateTokenComponent } from './generate-token.component';
+import { CallbackComponent } from './callback.component';
 
-describe('GenerateToken', () => {
-    let component: GenerateTokenComponent;
-    let fixture: ComponentFixture<GenerateTokenComponent>;
+describe('CallbackComponent', () => {
+    let component: CallbackComponent;
+    let fixture: ComponentFixture<CallbackComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [GenerateTokenComponent],
+            imports: [CallbackComponent],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(GenerateTokenComponent);
+        fixture = TestBed.createComponent(CallbackComponent);
         component = fixture.componentInstance;
         await fixture.whenStable();
     });

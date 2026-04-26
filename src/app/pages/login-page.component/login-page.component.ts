@@ -31,4 +31,18 @@ export class LoginPageComponent {
             console.log(res);
         });
     }
+
+    public loginWithGitLab(): void {
+        const clientId = '8021138b8758fc5204a816d4189726b4a4d825599798f2720352008b10dc4abc';
+        const redirectUri = 'http://localhost:4200/auth/callback';
+
+        const url = 
+            `https://gitlab.com/oauth/authorize` +
+            `?client_id=${clientId}` +
+            `&redirect_uri=${redirectUri}` +
+            `&response_type=code` +
+            `&scope=read_user api`;
+
+        window.location.href = url;
+    }
 }
