@@ -26,22 +26,22 @@ export class GitLabService {
     }
 
     public exchangeCode(code: string): Observable<any> {
-        const body = new URLSearchParams();
+        // const body = new URLSearchParams();
 
-        body.set('client_id', '8021138b8758fc5204a816d4189726b4a4d825599798f2720352008b10dc4abc');
-        body.set('client_secret', 'gloas-efffc44a8037407f08370172a12a8200c71b0890c2ba803226fc6671aaa60ffe');
-        body.set('code', code);
-        body.set('grant_type', 'authorization_code');
-        body.set('redirect_uri', 'http://localhost:4200/auth/callback');
+        // body.set('client_id', '8021138b8758fc5204a816d4189726b4a4d825599798f2720352008b10dc4abc');
+        // body.set('client_secret', 'gloas-efffc44a8037407f08370172a12a8200c71b0890c2ba803226fc6671aaa60ffe');
+        // body.set('code', code);
+        // body.set('grant_type', 'authorization_code');
+        // body.set('redirect_uri', 'http://localhost:4200/auth/callback');
 
-        return this.http.post(
-            'https://gitlab.com/oauth/token',
-            body.toString(),
-            {
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                }
-            }
-        );
+        const redirectUri = `${window.location.origin}/auth/callback`;
+
+        return this.http.post('https://gitlab.com/oauth/token', {
+            client_id: '8021138b8758fc5204a816d4189726b4a4d825599798f2720352008b10dc4abc',
+            client_secret: 'gloas-efffc44a8037407f08370172a12a8200c71b0890c2ba803226fc6671aaa60ffe',
+            code,
+            grant_type: 'authorization_code',
+            redirect_uri: redirectUri
+        });
     }
 }

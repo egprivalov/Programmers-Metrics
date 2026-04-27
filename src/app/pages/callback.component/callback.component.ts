@@ -11,14 +11,10 @@ import { take } from 'rxjs';
 export class CallbackComponent {
     private gitlab: GitLabService = inject(GitLabService)
     ngOnInit() {
-        console.log('callback loaded');
 
         const code = new URLSearchParams(window.location.search).get('code');
-
-        console.log('code:', code);
         
         if (code) {
-            console.log('exchanging code...');
             this.gitlab.exchangeCode(code).subscribe({
                 next: (res: any) => {
                 console.log('TOKEN RESPONSE:', res);
