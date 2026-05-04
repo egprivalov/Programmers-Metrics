@@ -19,17 +19,6 @@ export class LoginPageComponent {
     public token: string = '';
     public signInToken(): void {
         localStorage.setItem('gitlab_token', this.token);
-        console.log('Токен сохранен');
-    }
-
-    private gitlab = inject(GitLabService);
-
-    public testApi() {
-        this.gitlab.getUser()
-        .pipe(take(1))
-        .subscribe(res => {
-            console.log(res);
-        });
     }
 
     public loginWithGitLab(): void {
